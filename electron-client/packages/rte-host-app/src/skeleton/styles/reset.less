@@ -1,0 +1,174 @@
+@import './variables.less';
+
+:global {
+  #root,
+  body,
+  html {
+    .fullHeight();
+  }
+
+  body {
+    .bodyTypeScale();
+
+    overflow: hidden;
+    font-family: @fontFamily;
+    color: @textColor;
+    font-size: 14px;
+  }
+
+  article,
+  aside,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  main,
+  nav,
+  section {
+    display: block;
+  }
+
+  a,
+  a:active,
+  a:focus,
+  a:hover,
+  a:visited {
+    text-decoration: none;
+    color: @textColor;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+
+  h1 {
+    font-weight: @fontWeightLight;
+    font-size: 48px;
+    line-height: 50px;
+    letter-spacing: -1.5px;
+  }
+
+  h2 {
+    font-weight: @fontWeightLight;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.5px;
+  }
+
+  h3 {
+    font-weight: @fontWeightRegular;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0;
+  }
+
+  h4 {
+    font-weight: @fontWeightRegular;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+  }
+
+  h5 {
+    font-weight: @fontWeightRegular;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0;
+  }
+
+  h6 {
+    font-weight: @fontWeightMedium;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+  }
+
+  #root {
+    height: 100%;
+    width: 100%;
+  }
+
+  div::-webkit-scrollbar,
+  section::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  div::-webkit-scrollbar-thumb,
+  section::-webkit-scrollbar-thumb {
+    background-color: #808080;
+  }
+
+  .ant-layout-content {
+    min-height: 85vh !important;
+  }
+
+  .ant-pagination a.ant-pagination-item-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+  }
+
+  .ant-tabs-nav-container {
+    height: 45px;
+  }
+
+  .ant-tabs-nav-wrap {
+    padding-left: 16px;
+  }
+
+  .ant-calendar-date-panel {
+    .ant-calendar-header .ant-calendar-prev-year-btn,
+    .ant-calendar-header .ant-calendar-prev-month-btn,
+    .ant-calendar-header .ant-calendar-next-year-btn,
+    .ant-calendar-header .ant-calendar-next-month-btn {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .ant-btn-sm {
+    font-size: 13px;
+  }
+
+  // 将表格中的 Link 按钮设置为左对齐
+  .ant-table-tbody {
+    .ant-btn-link {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .ant-table-tbody > tr > td,
+  .ant-table-thead > tr > th {
+    padding: 12px 8px !important;
+    font-size: 14px;
+  }
+
+  .ant-input-search {
+    height: 32px;
+  }
+
+  button {
+    .ant-modal-close-x {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  ._hj-f5b2a1eb-9b07_feedback_minimized_label_text {
+    transform: rotate(0) !important;
+  }
+
+  .ant-pro-basicLayout-children-content-wrap {
+    height: 100%;
+  }
+}

@@ -1,0 +1,59 @@
+@durationFast: 100ms;
+@durationSlow: 200ms;
+
+.standardEase {
+  // For moving visible elements.
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.decelerateEase {
+  // For incoming elements, likes ease-out.
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.accelerateEase {
+  // For exiting elements, likes ease-in.
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.zoomIn {
+  animation: zoomIn @durationSlow both;
+  .decelerateEase();
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+
+.zoomOut {
+  animation: zoomOut @durationFast both;
+  .accelerateEase();
+}
+@keyframes zoomOut {
+  to {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn @durationSlow both;
+  .decelerateEase();
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  animation: fadeOut @durationFast both;
+  .accelerateEase();
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}

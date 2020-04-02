@@ -1,0 +1,24 @@
+variables:
+  DOCKER_DRIVER: overlay2
+  EFF_NO_LINK_RULES: 'true'
+  GIT_CLEAN_FLAGS: -ffdx -e /dist/
+  NODE_OPTIONS: --max-old-space-size=2048
+  PARSER_NO_WATCH: 'true'
+  DOCKER_TLS_CERTDIR: ''
+  DOCKER_HOST: tcp://localhost:2375
+  DOCKER_VERSION: 19.03.5
+
+build image:
+  only:
+    - dev
+    - master
+  stage: build
+  image: docker:${DOCKER_VERSION}
+  services:
+    - name: docker:${DOCKER_VERSION}-dind
+  before_script:
+    - docker info
+    - docker login ${DOCKER_REGISTRY_SERVER} -u ${DOCKER_REGISTRY_USER} -p ${DOCKER_REGISTRY_PASSWORD}
+  script:
+    - export IMAGE=${DOCKER_REGISTRY_SERVER}/m-fe-web-client
+    - sh ./scripts/docker/build-on-gitlab.sh

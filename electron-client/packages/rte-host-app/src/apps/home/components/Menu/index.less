@@ -1,0 +1,39 @@
+.menuContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  -webkit-app-region: no-drag;
+}
+
+.memuItemContainer {
+  width: 100%;
+  height: 36px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #fff;
+  margin-bottom: 18px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .menuItemContent {
+    max-width: 90px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+
+    .anticon {
+      margin-right: 8px;
+    }
+  }
+}
+
+.memuItemContainer.menuItemSelected,
+.memuItemContainer:hover {
+  background-color: #fff;
+  color: #2e72b8;
+}

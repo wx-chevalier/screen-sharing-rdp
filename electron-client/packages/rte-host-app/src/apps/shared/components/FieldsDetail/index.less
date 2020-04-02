@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+
+  .header {
+    height: 75px;
+    width: 100%;
+
+    .title {
+      height: 100%;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      float: left;
+      margin-left: 32px;
+      font-size: 18px;
+      color: rgba(0, 0, 0, 0.75);
+    }
+
+    .actions {
+      height: 100%;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      float: right;
+      margin-right: 32px;
+    }
+  }
+}
+
+.fields {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-flow: wrap;
+
+  .field_item {
+    height: 50px;
+    margin-left: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .field_name {
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.65);
+    }
+
+    .field_value {
+      min-width: 200px;
+      margin-left: 16px;
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.65);
+    }
+  }
+}

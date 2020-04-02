@@ -1,0 +1,4 @@
+FROM abiosoft/caddy
+COPY . /srv
+RUN find . -name '*.map' -type f -exec rm -f {} \;
+EXPOSE 2015

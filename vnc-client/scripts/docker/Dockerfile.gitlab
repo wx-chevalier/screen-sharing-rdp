@@ -1,0 +1,17 @@
+FROM registry.mybiz.com/ufc/ufc-fe-builder:latest as builder
+
+RUN apk upgrade --update-cache --available \\
+  && apk add --upgrade autoconf automake build-base libtool nasm pkgconfig zlib-dev libpng-dev
+
+# 安装与编译代码
+COPY . /app
+WORKDIR /app
+
+RUN yarn install --frozen-lockfile --registry https://registry.npm.taobao.org/
+RUN yarn build
+RUN find . -name '*.map' -type f -exec rm -f {} \;
+
+# 最终的应用
+FROM abiosoft/caddy
+COPY --from=builder /app/build /srv
+EXPOSE 2015

@@ -1,0 +1,44 @@
+:global(.ant-pro-sider-menu-sider) {
+  flex: 0 0 220px;
+  max-width: 220px;
+  min-width: 220px;
+  width: 220px;
+
+  :global(.ant-pro-sider-menu-logo) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+    h1 {
+      display: none;
+    }
+  }
+}
+
+:global(.ant-layout-header) {
+  margin: 0 24px;
+  box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+  width: unset !important;
+}
+
+:global(.ant-layout-content) {
+  box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+  background-color: white;
+  margin: 24px;
+}
+
+.selectedMenu {
+  color: white;
+  background: #6874e2;
+  box-shadow: 0 0 7px 0 rgba(255, 255, 255, 0.36),
+    0 2px 10px 0 rgba(104, 116, 226, 0.44);
+  border-radius: 0 10px 10px 0;
+  transform: translateX(-24px);
+  padding-left: 24px;
+}
+
+.selectedMenuCollapsed {
+  border-radius: 10px;
+  transform: translateX(-16px);
+  padding-left: 16px;
+}

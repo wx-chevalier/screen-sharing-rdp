@@ -1,0 +1,201 @@
+// Part of this file is from [Google Material Design](https://material.io/design/).
+
+// Font.
+@fontFamily: 'Chinese Quote', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue',
+  Helvetica, Arial, sans-serif;
+
+// Font Size.
+@fontSizeSmall: 14px;
+@fontSizeMedium: 16px;
+
+// Font Weight.
+@fontWeightLight: 300;
+@fontWeightRegular: 400;
+@fontWeightMedium: 500;
+@fontWeightBold: 700;
+
+// Color.
+@black: #000;
+@white: #fff;
+@primaryColor: #2e72b8;
+@backgroundColor: @white;
+@backgroundColorSecondary: #eee;
+@textColor: fade(@black, 87%);
+@textColorSecondary: fade(@black, 60%);
+@disabledColor: fade(@black, 38%);
+
+// Border.
+@borderColor: #e0e0e0;
+@borderRadiusMedium: 4px;
+@borderRadiusLarge: 6px;
+
+// Link.
+@linkColor: @primaryColor;
+@linkColorHover: lighten(@primaryColor, 12%);
+
+// Shadow.
+@shadowColor: rgba(0, 0, 0, 0.15);
+@shadowInformation: 0 2px 4px @shadowColor;
+@shadowCover: 0 4px 8px @shadowColor;
+@shadowNavigation: 0 6px 12px @shadowColor;
+@shadowModal: 0 10px 20px @shadowColor;
+
+// Type scale.
+.subtitleTypeScale() {
+  font-weight: @fontWeightRegular;
+  font-size: @fontSizeMedium;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+}
+
+.subtitleTypeScaleSecondary() {
+  font-weight: @fontWeightMedium;
+  font-size: @fontSizeSmall;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+
+.bodyTypeScale() {
+  font-weight: @fontWeightRegular;
+  font-size: @fontSizeMedium;
+  line-height: 28px;
+  letter-spacing: 0.44px;
+}
+
+.bodyTypeScaleSecondary() {
+  font-weight: @fontWeightRegular;
+  font-size: @fontSizeSmall;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+}
+
+.buttonTypeScale() {
+  font-weight: @fontWeightMedium;
+  font-size: @fontSizeSmall;
+  line-height: 16px;
+  letter-spacing: 1.35px;
+}
+
+// Mixins.
+.fullWidth() {
+  width: 100%;
+}
+
+.fullHeight() {
+  height: 100%;
+}
+
+.hDivider() {
+  border-bottom: 1px solid @borderColor;
+}
+
+.vDivider() {
+  border-left: 1px solid @borderColor;
+}
+
+.button {
+  .buttonTypeScale();
+
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  box-shadow: @shadowInformation;
+  outline: none;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.circle(@diameter) {
+  border-radius: 50%;
+  width: @diameter;
+  height: @diameter;
+  line-height: @diameter;
+}
+
+.appContainer {
+  width: 100%;
+  height: 100%;
+  background: white;
+  box-shadow: @shadowCover;
+  padding: 16px;
+}
+
+.globalNavHeader {
+  height: 45px;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 16px;
+  display: flex;
+  justify-content: flex-start;
+
+  > i,
+  > span {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexStart {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.flexVerticalCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.popTitle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 12px;
+  .phoneNumber {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 16px;
+    > span {
+      color: rgba(0, 0, 0, 0.65);
+    }
+  }
+}
+
+.popContent {
+  display: flex;
+  justify-content: flex-start;
+  .weChat {
+    display: flex;
+    margin-left: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    > span {
+      font-size: 8px;
+    }
+  }
+}
+
+.overlay {
+  :global {
+    .ant-popover-inner-content {
+      padding: 0;
+    }
+
+    .ant-popover-arrow {
+      background: #475365;
+      border-color: #475365 !important;
+    }
+  }
+}

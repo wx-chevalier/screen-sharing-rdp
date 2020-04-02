@@ -1,0 +1,186 @@
+@import './animations/index.less';
+
+.container {
+  position: relative;
+}
+
+.appContainer {
+  width: 100vw;
+  height: 100vh;
+  min-width: 900px;
+
+  .updateMask {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 0 180px;
+
+    &.flexContainer {
+      flex-direction: column;
+    }
+
+    .ant-progress-text {
+      color: #fff;
+    }
+
+    .updateTip {
+      color: #fff;
+      font-size: 22px;
+    }
+  }
+
+  .sideBar {
+    position: relative;
+    grid-area: sidebar;
+    background-color: #2e72b8;
+    overflow: hidden;
+
+    .logoBox {
+      height: 154px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo {
+      background-image: url('../../../../assets/logo_u_white.svg');
+      background-size: 100% 100%;
+    }
+
+    .logoExpand {
+      .logo;
+
+      width: 60px;
+      height: 95px;
+      animation: logoSize_30_60 0.15s ease both;
+      -webkit-animation: logoSize_30_60 0.15s ease both;
+    }
+
+    .logoUnExpand {
+      .logo;
+
+      width: 30px;
+      height: 45px;
+      animation: logoSize_60_30 0.15s ease both;
+      -webkit-animation: logoSize_60_30 0.15s ease both;
+    }
+
+    .version {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      color: #fff;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 200;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      padding: 20px;
+    }
+  }
+
+  .content {
+    grid-area: content;
+    position: relative;
+  }
+
+  .toolbar-icon {
+    margin-right: 5px;
+    transition: color 0.2s ease;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.anticon {
+  font-size: 17px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.subApp {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.sideExpand {
+  width: fit-content;
+  height: fit-content;
+  color: #fff;
+  font-size: 20px;
+}
+
+.appContainerUnExpand {
+  .appContainer;
+
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-template-rows: 100%;
+  grid-template-areas: 'sidebar content';
+  animation: gridTemplateColumns_130_60 0.15s ease both;
+  -webkit-animation: gridTemplateColumns_130_60 0.15s ease both;
+}
+
+.appContainerExpand {
+  .appContainer;
+
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  grid-template-rows: 100%;
+  grid-template-areas: 'sidebar content';
+  animation: gridTemplateColumns_60_130 0.15s ease both;
+  -webkit-animation: gridTemplateColumns_60_130 0.15s ease both;
+}
+
+.iconExpand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(1);
+  transition: transform 0.15s;
+}
+
+.iconUnExpand {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(1.5);
+  transition: transform 0.15s;
+}
+
+.arrowExpand {
+  transition: transform 0.15s;
+  transform: rotateY(0deg);
+}
+
+.arrowUnExpand {
+  transition: transform 0.15s;
+  transform: rotateY(180deg);
+}
+
+.textShow {
+  display: flex;
+  animation: text_0_1 0.15s ease both;
+  -webkit-animation: text_0_1 0.15s ease both;
+}
+
+.textHidden {
+  display: none;
+  animation: text_1_0 0.15s ease both;
+  -webkit-animation: text_1_0 0.15s ease both;
+}

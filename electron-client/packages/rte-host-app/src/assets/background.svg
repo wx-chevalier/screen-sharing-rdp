@@ -1,0 +1,54 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900"
+  xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient x1="111.535%" y1="110.503%" x2="-1.294%" y2="-2.148%" id="a">
+      <stop stop-color="#434EAD" offset="0%" />
+      <stop stop-color="#8C8DFF" offset="100%" />
+    </linearGradient>
+    <linearGradient x1="109.596%" y1="94.799%" x2="-25.051%" y2="7.677%" id="b">
+      <stop stop-color="#1B3BD8" offset="0%" />
+      <stop stop-color="#176CE0" offset="31.474%" />
+      <stop stop-color="#0B92E7" offset="49.184%" />
+      <stop stop-color="#0BB6EB" offset="71.324%" />
+      <stop stop-color="#00E0F2" offset="100%" />
+    </linearGradient>
+    <linearGradient x1="-11.319%" y1="-27.395%" x2="100%" y2="106.924%" id="c">
+      <stop stop-color="#1B3BD8" offset="0%" />
+      <stop stop-color="#176CE0" offset="31.474%" />
+      <stop stop-color="#0B92E7" offset="49.184%" />
+      <stop stop-color="#0BB6EB" offset="71.324%" />
+      <stop stop-color="#00E0F2" offset="100%" />
+    </linearGradient>
+    <linearGradient x1="19.94%" y1="-10.862%" x2="123.121%" y2="138.706%" id="d">
+      <stop stop-color="#1B3BD8" offset="0%" />
+      <stop stop-color="#176CE0" offset="31.474%" />
+      <stop stop-color="#0B92E7" offset="49.184%" />
+      <stop stop-color="#0BB6EB" offset="71.324%" />
+      <stop stop-color="#00E0F2" offset="100%" />
+    </linearGradient>
+    <linearGradient x1="-8.377%" y1="50.014%" x2="99.467%" y2="50.014%" id="e">
+      <stop stop-color="#54AAF6" offset="0%" />
+      <stop stop-color="#529EFB" offset="24.289%" />
+      <stop stop-color="#4976DB" offset="58.209%" />
+      <stop stop-color="#3969D3" offset="92.422%" />
+      <stop stop-color="#456DD0" offset="100%" />
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <path fill="#FFF" d="M1 0h1440v900H1z" />
+    <path d="M1086.659 1159.318l-140.068 37.53c-5.335 1.43-10.818-1.736-12.248-7.07-1.43-5.335 1.737-10.818 7.071-12.248l136.115-36.472-3.834-7.668-24.104 6.459c-5.335 1.43-10.818-1.737-12.248-7.071-1.43-5.335 1.737-10.818 7.071-12.248l20.151-5.4L716 418h900v900h-450l-79.341-158.682z" fill="url(#a)" transform="translate(-176 -418)" />
+    <g opacity=".6">
+      <path d="M1844 1031.5c0 132.083-107.417 239.5-239.5 239.5S1365 1163.98 1365 1031.5c0-132.083 107.417-239.5 239.5-239.5 132.48 0 239.5 107.417 239.5 239.5z" fill="url(#b)" fill-rule="nonzero" opacity=".1" transform="scale(-1 1) rotate(-28 -750.253 6904.85)" />
+      <path d="M355 946.5c0 44.395-36.105 80.5-80.5 80.5S194 991.03 194 946.5c0-44.395 36.105-80.5 80.5-80.5 44.53 0 80.5 36.105 80.5 80.5z" fill="url(#c)" fill-rule="nonzero" opacity=".091" transform="translate(-176 -418)" />
+      <path d="M508 254c0 140.08-113.92 254-254 254C113.92 508 0 394.502 0 254 0 113.92 113.92 0 254 0c140.502 0 254 113.92 254 254z" fill="url(#b)" fill-rule="nonzero" opacity=".1" transform="translate(-176 -418)" />
+      <path d="M862 1196.5c0 44.395-36.105 80.5-80.5 80.5s-80.5-35.97-80.5-80.5c0-44.395 36.105-80.5 80.5-80.5 44.53 0 80.5 36.105 80.5 80.5zm335 101c0 44.395-36.105 80.5-80.5 80.5s-80.5-35.97-80.5-80.5c0-44.395 36.105-80.5 80.5-80.5 44.53 0 80.5 36.105 80.5 80.5z" fill="url(#c)" fill-rule="nonzero" opacity=".091" transform="translate(-176 -418)" />
+      <g opacity=".228">
+        <path d="M80 40c0 22.06-17.94 40-40 40S0 62.126 0 40C0 17.94 17.94 0 40 0c22.126 0 40 17.94 40 40z" opacity=".2" transform="translate(1289 104)" fill="url(#d)" fill-rule="nonzero" />
+      </g>
+      <g opacity=".258">
+        <path d="M109 54.5c0 30.056-24.444 54.5-54.5 54.5S0 84.647 0 54.5C0 24.444 24.444 0 54.5 0 84.647 0 109 24.444 109 54.5z" opacity=".1" transform="matrix(-1 0 0 1 829 35)" fill="url(#e)" fill-rule="nonzero" />
+      </g>
+    </g>
+    <path d="M917.855 772.726l180.565-48.383c5.335-1.43 10.819 1.737 12.248 7.071 1.43 5.335-1.736 10.818-7.071 12.248l-176.81 47.376-8.932-18.312zm-40.505 58.293l148.07-39.676c5.335-1.43 10.819 1.737 12.248 7.071 1.43 5.335-1.736 10.818-7.071 12.248l-239.55 64.187a9.967 9.967 0 01-4.047.236l90.35-44.066z" fill="#FFF" />
+  </g>
+</svg>

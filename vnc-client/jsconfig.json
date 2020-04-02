@@ -1,0 +1,3 @@
+{
+  "extends": "@m-fe/tsconfig/jsconfig.json"
+}
