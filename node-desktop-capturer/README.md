@@ -1,4 +1,4 @@
-# node-node-desktop-capturer
+# node-desktop-capturer
 
 Take a screenshot of the computer on which Node is running, using platform-specific external tools included with the package.
 
