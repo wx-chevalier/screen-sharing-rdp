@@ -1,18 +1,33 @@
-module.exports = function(options, callback) {
+module.exports = function (options, callback) {
+  var fs = require("fs");
+  var childProcess = require("child_process");
+  var path = require("path");
 
-	var fs = require('fs');
-	var childProcess = require('child_process');
-	var path = require('path');
-	
-	var nircmd = childProcess.spawn(path.join(__dirname.replace('app.asar', 'app.asar.unpacked'), "bin", "nircmd.exe"), ["savescreenshot", options.output]);	
+  const cmdPath1 = path.join(
+    __dirname.replace("app.asar", "app.asar.unpacked"),
+    "bin",
+    "nircmd.exe"
+  );
 
-	nircmd.on('close', function(code, signal) {
-		try {
-			fs.statSync(options.output);
-			callback(null, options); // callback with options, in case options added
-		}
-		catch(error) {
-			callback("file_not_found", null);
-		}
-	});
+  // 有时候会在 node_modules 路径下
+  const cmdPath2 = path.join(
+    __dirname.replace("app.asar", "app.asar.unpacked"),
+    "node_modules/node-desktop-capturer/capture",
+    "bin",
+    "nircmd.exe"
+  );
+
+  var nircmd = childProcess.spawn(
+    fs.existsSync(cmdPath1) ? cmdPath1 : cmdPath2,
+    ["savescreenshot", options.output]
+  );
+
+  nircmd.on("close", function (code, signal) {
+    try {
+      fs.statSync(options.output);
+      callback(null, options); // callback with options, in case options added
+    } catch (error) {
+      callback("file_not_found", null);
+    }
+  });
 };
