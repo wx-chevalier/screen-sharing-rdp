@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/6.4.0/adapter.min.js"
+      integrity="sha256-UH0Npcih7yj1s23pQK0UCrCSxx7AkT91CCMsUGnZ9Ew="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .canvas {
+        position: absolute;
+        z-index: 10;
+        /* background-color: rgba(255, 0, 0, 0.5); */
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>WebRTC Remote Desktop</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="controls">
+        <div id="error"></div>
+        <button id="start-stop">Connect</button>
+      </div>
+      <div id="instructions">Press Connect to start session</div>
+      <video id="remote-video" autoplay muted playsinline></video>
+      <canvas id="remote-canvas" class="canvas"></canvas>
+    </div>
+    <script src="/static/js/app.js"></script>
+  </body>
+</html>
