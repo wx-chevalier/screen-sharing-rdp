@@ -11,7 +11,7 @@
     <img src="https://s2.ax1x.com/2020/01/06/lr21MT.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Electron-ScreenSharing</h3>
+  <h3 align="center">dd-screen-sharing-rdp</h3>
 
   <p align="center">
     基于 Electron 的 Windows 软件管理、文件监听以及屏幕共享与控制
