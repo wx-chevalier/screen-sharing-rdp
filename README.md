@@ -33,11 +33,9 @@
 
 项目中我们使用了 Electron 进行 Windows 设备上的软件安装、软件运行监控与日志动态监控，使用 [jsmpeg-vnc](https://github.com/phoboslab/jsmpeg-vnc) 提供的 Windows 上实时屏幕共享的能力，其基于 WebSocket 传输标准 VNC 协议的数据；如果需要进行公网 WebSocket 转发可以自行搭建 WebSocket Forward 服务。
 
-目前本项目正在尝试使用 FFMpeg + WebSocket 方式以及原生桌面流推向 WebRTC 两种方式，分别参阅不同的目录。
+目前本项目正在尝试使用 Mpegts + WebSocket 方式以及原生桌面流推向 WebRTC 两种方式，分别参阅不同的目录，对于 Electron 客户端请参阅 [m-fe-electron](https://github.com/wx-chevalier/m-fe-electron)。
 
 ## Nav | 导航
-
-- Electron 项目模板参考 [wx-chevalier/m-fe-electron](https://github.com/wx-chevalier/m-fe-electron)。
 
 # Getting Started
 
@@ -105,9 +103,11 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Acknowledgements
 
-- [Awesome-Lists](https://github.com/wx-chevalier/Awesome-Lists): 📚 Guide to Galaxy, curated, worthy and up-to-date links/reading list for ITCS-Coding/Algorithm/SoftwareArchitecture/AI. 💫 ITCS-编程/算法/软件架构/人工智能等领域的文章/书籍/资料/项目链接精选。
+- [Awesome-Lists #Project#](https://github.com/wx-chevalier/Awesome-Lists): 📚 Guide to Galaxy, curated, worthy and up-to-date links/reading list for ITCS-Coding/Algorithm/SoftwareArchitecture/AI. 💫 ITCS-编程/算法/软件架构/人工智能等领域的文章/书籍/资料/项目链接精选。
 
-- [Awesome-CS-Books](https://github.com/wx-chevalier/Awesome-CS-Books): :books: Awesome CS Books/Series(.pdf by git lfs) Warehouse for Geeks, ProgrammingLanguage, SoftwareEngineering, Web, AI, ServerSideApplication, Infrastructure, FE etc. :dizzy: 优秀计算机科学与技术领域相关的书籍归档。
+- [Awesome-CS-Books #Project#](https://github.com/wx-chevalier/Awesome-CS-Books): :books: Awesome CS Books/Series(.pdf by git lfs) Warehouse for Geeks, ProgrammingLanguage, SoftwareEngineering, Web, AI, ServerSideApplication, Infrastructure, FE etc. :dizzy: 优秀计算机科学与技术领域相关的书籍归档。
+
+- [jsmpeg #Project#](https://github.com/phoboslab/jsmpeg): JSMpeg is a Video Player written in JavaScript. It consists of an MPEG-TS demuxer, MPEG1 video & MP2 audio decoders, WebGL & Canvas2D renderers and WebAudio sound output. JSMpeg can load static videos via Ajax and allows low latency streaming (~50ms) via WebSockets.
 
 ## Copyright & More | 延伸阅读
 

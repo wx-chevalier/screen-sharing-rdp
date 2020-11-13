@@ -1,7 +1,0 @@
-*.log
-*.tsbuildinfo
-.cache
-.vscode
-coverage
-dist
-node_modules
