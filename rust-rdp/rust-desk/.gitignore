@@ -1,0 +1,10 @@
+/target
+.vscode
+.idea
+.DS_Store
+src/ui/inline.rs
+extractor
+__pycache__
+src/version.rs
+*dmg
+sciter.dll
